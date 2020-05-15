@@ -1,0 +1,24 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    padding: 20px;
+}
+
+label {
+    display: block;
+}
+
+button {
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s;
+    background-color: #fff;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #3333ff;
+}

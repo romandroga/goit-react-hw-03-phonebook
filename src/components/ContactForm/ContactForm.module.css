@@ -1,0 +1,14 @@
+.contactForm{
+    border: 1px solid grey;
+    width: 400px;
+    padding: 20px;
+}
+.inputForm{
+    margin-bottom: 15px;
+}
+.submitButton{
+    display: block;
+}
+.submitButton:disabled{
+    cursor: default;
+}
