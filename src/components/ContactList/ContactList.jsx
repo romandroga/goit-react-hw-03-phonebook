@@ -6,8 +6,8 @@ import Contact from '../Contact/Contact';
 const ContactList = ({ contacts, onDelete }) => (
   contacts.length > 0 && (
     <ul>
-      {contacts.map((item) => {
-        const { name, id, number } = item;
+      {contacts.map((contact) => {
+        const { name, id, number } = contact;
         return (
           <Contact
             key={id}

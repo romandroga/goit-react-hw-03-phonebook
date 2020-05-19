@@ -38,7 +38,6 @@ export default class ContactForm extends Component {
   };
 
   render() {
-    const { nameInputId, numberInputId } = this;
     const { name, number } = this.state;
     const { contactForm, submitButton, inputForm } = styles;
     return (
@@ -46,20 +45,20 @@ export default class ContactForm extends Component {
         onSubmit={this.handleSubmit}
         className={contactForm}
       >
-        <label htmlFor={nameInputId}>Name</label>
+        <label htmlFor={this.nameInputId}>Name</label>
         <input
           className={inputForm}
           type="text"
-          id={nameInputId}
+          id={this.nameInputId}
           name="name"
           onChange={this.handleChange}
           value={name}
         />
-        <label htmlFor={numberInputId}>Number</label>
+        <label htmlFor={this.numberInputId}>Number</label>
         <input
           className={inputForm}
           type="tel"
-          id={numberInputId}
+          id={this.numberInputId}
           name="number"
           onChange={this.handleChange}
           value={number}
@@ -67,7 +66,7 @@ export default class ContactForm extends Component {
         <button
           className={submitButton}
           type="submit"
-          disabled={name && number ? false : true}
+          disabled={!name || !number}
         >
           Add contact
         </button>
